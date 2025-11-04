@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AHS Healthcare Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    /* AHS Logo Blue - Vibrant Primary Brand Color */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 55%;
+
+    /* AHS Logo Green - Vibrant Secondary Brand Color */
+    --secondary: 140 70% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 13% 45%;
+
+    --accent: 140 60% 92%;
+    --accent-foreground: 140 70% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 45%;
+
+    /* Vibrant Healthcare Design System - HSL Colors Only */
+    --medical-blue: 210 100% 45%;
+    --medical-blue-light: 210 100% 90%;
+    --medical-blue-dark: 210 100% 35%;
+    --medical-green: 140 70% 45%;
+    --medical-green-light: 140 60% 90%;
+    --medical-green-dark: 140 70% 35%;
+    --medical-warning: 25 95% 53%;
+    --trust-blue: 210 100% 35%;
+    --success-green: 140 70% 45%;
+    --warning-orange: 25 95% 53%;
+    --premium-purple: 250 84% 54%;
+    --soft-gray: 220 13% 18%;
+    
+    /* Vibrant Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 55%));
+    --gradient-medical: linear-gradient(135deg, hsl(140 70% 45%), hsl(140 70% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(140 60% 96%));
+    --gradient-premium: linear-gradient(135deg, hsl(210 100% 45%), hsl(250 84% 54%));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    
+    /* Vibrant Premium Shadows */
+    --shadow-premium: 0 20px 40px -12px hsl(210 100% 45% / 0.25);
+    --shadow-card: 0 8px 32px -8px hsl(210 100% 45% / 0.15);
+    --shadow-green: 0 12px 28px -8px hsl(140 70% 45% / 0.25);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --shadow-float: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* Premium Animations */
+    --transition-premium: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glass: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Typography Scale */
+    --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 13% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 13% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 13% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 220 13% 8%;
+    --primary-glow: 210 100% 65%;
+
+    --secondary: 140 70% 55%;
+    --secondary-foreground: 220 13% 8%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 140 60% 25%;
+    --accent-foreground: 140 70% 85%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 210 100% 55%;
+
+    /* Dark mode vibrant healthcare colors */
+    --medical-blue: 210 100% 55%;
+    --medical-blue-light: 210 100% 25%;
+    --medical-blue-dark: 210 100% 45%;
+    --medical-green: 140 70% 55%;
+    --medical-green-light: 140 60% 25%;
+    --medical-green-dark: 140 70% 45%;
+    --trust-blue: 210 100% 45%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-medical {
+    background: var(--gradient-medical);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .gradient-premium {
+    background: var(--gradient-premium);
+  }
+  
+  .gradient-glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-green {
+    box-shadow: var(--shadow-green);
+  }
+  
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .shadow-float {
+    box-shadow: var(--shadow-float);
+  }
+  
+  .transition-premium {
+    transition: var(--transition-premium);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .transition-glass {
+    transition: var(--transition-glass);
+  }
+  
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+  
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
