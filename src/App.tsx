@@ -8,12 +8,16 @@ import Index from "./pages/Index";
 import SplashPage from "./pages/SplashPage";
 import OnboardingPage from "./pages/OnboardingPage";
 import UserTypeSelectionPage from "./pages/UserTypeSelectionPage";
+import { AdminRoute } from './components/AdminRoute';
+import AdminLayout from './layouts/AdminLayout';
 import LoginPage from "./pages/LoginPage";
+import AdminDashboardPage from './pages/AdminDashboardPage';
 import DashboardPage from "./pages/DashboardPage";
 import ProviderDashboardPage from "./pages/ProviderDashboardPage";
 import ProviderSchedulePage from "./pages/ProviderSchedulePage";
 import ProviderMessagesPage from "./pages/ProviderMessagesPage";
 import ProviderProfilePage from "./pages/ProviderProfilePage";
+import AdminLoginPage from './pages/AdminLoginPage';
 import BookingsPage from "./pages/BookingsPage";
 import BookNowPage from "./pages/BookNowPage";
 import MessagesPage from "./pages/MessagesPage";
@@ -57,6 +61,20 @@ const App = () => {
             <Route path="/onboarding" element={<OnboardingPage />} />
             <Route path="/user-type" element={<UserTypeSelectionPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/admin-login" element={<AdminLoginPage />} />
+
+            {/* Admin Routes - MOVED OUTSIDE ProtectedRoute */}
+            <Route
+              path="/admin"
+              element={
+                <AdminRoute>
+                  <AdminLayout />
+                </AdminRoute>
+              }
+            >
+              <Route index element={<AdminDashboardPage />} />
+              {/* Add more admin routes here later */}
+            </Route>
 
             {/* Protected routes */}
             <Route element={<ProtectedRoute />}>
