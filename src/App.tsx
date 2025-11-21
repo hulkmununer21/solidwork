@@ -12,6 +12,12 @@ import { AdminRoute } from './components/AdminRoute';
 import AdminLayout from './layouts/AdminLayout';
 import LoginPage from "./pages/LoginPage";
 import AdminDashboardPage from './pages/AdminDashboardPage';
+import AdminProviderManagementPage from './pages/AdminProviderManagementPage';
+import AdminUserManagementPage from './pages/AdminUserManagementPage';
+import AdminPaymentsPage from './pages/AdminPaymentsPage';
+import AdminBookingsPage from './pages/AdminBookingsPage';
+import  AdminAnalyticsPage from './pages/AdminAnalyticsPage';
+import  AdminSettingsPage from './pages/AdminSettingsPage.tsx';
 import DashboardPage from "./pages/DashboardPage";
 import ProviderDashboardPage from "./pages/ProviderDashboardPage";
 import ProviderSchedulePage from "./pages/ProviderSchedulePage";
@@ -73,7 +79,12 @@ const App = () => {
               }
             >
               <Route index element={<AdminDashboardPage />} />
-              {/* Add more admin routes here later */}
+              <Route path="/admin/providers" element={<AdminProviderManagementPage />} />
+              <Route path="/admin/users" element={<AdminUserManagementPage />} />
+              <Route path="/admin/bookings" element={<AdminBookingsPage />} />
+              <Route path="/admin/payments" element={<AdminPaymentsPage />} />
+              <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
+              <Route path="/admin/settings" element={<AdminSettingsPage />} />
             </Route>
 
             {/* Protected routes */}

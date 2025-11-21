@@ -29,7 +29,7 @@ const AdminLayout = () => {
     { path: "/admin/payments", icon: Wallet, label: "Payments" },
     { path: "/admin/analytics", icon: BarChart3, label: "Analytics" },
     { path: "/admin/settings", icon: Settings, label: "Settings" },
-    { path: "/admin/compliance", icon: Shield, label: "Compliance" }
+    
   ];
 
   const handleLogout = async () => {
