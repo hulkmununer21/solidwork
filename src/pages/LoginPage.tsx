@@ -12,10 +12,10 @@ interface LoginPageProps {
   onBack?: () => void;
 }
 
-// Helper to generate health_id in format AHS-1234567
+// Helper to generate health_id in format HSA-1234567
 const generateHealthId = () => {
   const randomNum = Math.floor(1000000 + Math.random() * 9000000);
-  return `AHS-${randomNum}`;
+  return `HSA-${randomNum}`;
 };
 
 const LoginPage = ({ onComplete, onBack }: LoginPageProps) => {
@@ -32,7 +32,7 @@ const LoginPage = ({ onComplete, onBack }: LoginPageProps) => {
 
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const userType = (searchParams.get('type') || localStorage.getItem('ahs_user_type') || 'patient') as UserType;
+  const userType = (searchParams.get('type') || localStorage.getItem('HSA_user_type') || 'patient') as UserType;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,8 +63,8 @@ const LoginPage = ({ onComplete, onBack }: LoginPageProps) => {
           return;
         }
 
-        localStorage.setItem('ahs_auth_token', result.data.session?.access_token || '');
-        localStorage.setItem('ahs_user_type', userType);
+        localStorage.setItem('HSA_auth_token', result.data.session?.access_token || '');
+        localStorage.setItem('HSA_user_type', userType);
 
         setLoading(false);
 
@@ -93,8 +93,8 @@ const LoginPage = ({ onComplete, onBack }: LoginPageProps) => {
           return;
         }
 
-        localStorage.setItem('ahs_auth_token', result.data.session?.access_token || '');
-        localStorage.setItem('ahs_user_type', userType);
+        localStorage.setItem('HSA_auth_token', result.data.session?.access_token || '');
+        localStorage.setItem('HSA_user_type', userType);
 
         // Initialize patient profile for patient role
         if (userType === 'patient') {
@@ -175,7 +175,7 @@ const LoginPage = ({ onComplete, onBack }: LoginPageProps) => {
       icon: User,
       title: 'Patient',
       signInTitle: 'Welcome Back!',
-      signUpTitle: 'Join AHS Today'
+      signUpTitle: 'Join HSA Today'
     },
     provider: {
       color: 'premium-purple',
