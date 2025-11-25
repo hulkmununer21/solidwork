@@ -10,7 +10,7 @@ interface OnboardingScreensProps {
 const screens = [
   {
     icon: Heart,
-    title: "Welcome to AHS",
+    title: "Welcome to HSA",
     description: "Your trusted partner in healthcare, connecting you with quality medical services across Africa."
   },
   {
