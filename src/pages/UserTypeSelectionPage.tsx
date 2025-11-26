@@ -27,7 +27,7 @@ const UserTypeSelectionPage = ({ onSelect }: UserTypeSelectionPageProps) => {
             <img src={ahsLogo} alt="AHS" className="w-12 h-12" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2 font-display">
-            Welcome to AHS
+            Welcome to HSA
           </h1>
           <p className="text-white/90 text-lg font-body">
             How would you like to use our platform?
