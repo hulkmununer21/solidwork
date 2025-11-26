@@ -15,7 +15,7 @@ const UserTypeSelection = ({ onSelect }: UserTypeSelectionProps) => {
         <div className="bg-white rounded-2xl p-6 w-20 h-20 mx-auto mb-6 shadow-card">
           <img src={ahsLogo} alt="AHS" className="w-full h-full" />
         </div>
-        <h1 className="text-3xl font-bold font-display mb-2 text-foreground">Welcome to AHS</h1>
+        <h1 className="text-3xl font-bold font-display mb-2 text-foreground">Welcome to HSA</h1>
         <p className="text-muted-foreground font-body">Choose how you'd like to continue</p>
       </div>
 

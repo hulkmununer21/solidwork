@@ -20,7 +20,7 @@ const SplashPage = () => {
             height="250"
           />
         </div>
-        <h1 className="text-4xl font-bold text-white mb-2 font-display">AHS - African Health Service</h1>
+        <h1 className="text-4xl font-bold text-white mb-2 font-display">HSA - Health Service Africa</h1>
         <p className="text-white/90 text-lg font-body mb-8">Connect with certified healthcare providers across Africa</p>
         
         <div className="space-y-4">
