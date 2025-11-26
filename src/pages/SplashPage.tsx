@@ -14,7 +14,7 @@ const SplashPage = () => {
         <div className="bg-white rounded-3xl p-3 shadow-float mb-8 border-4 border-white/20 max-w-[250px] mx-auto">
           <img 
             src="/lovable-uploads/0bb1befb-972c-476e-820f-f5d902b8e03b.png" 
-            alt="AHS - African Health Service Logo - Connect with healthcare providers across Africa" 
+            alt="AHS - HSA Logo - Connect with healthcare providers across Africa" 
             className="w-full h-auto mx-auto object-contain"
             width="250"
             height="250"
